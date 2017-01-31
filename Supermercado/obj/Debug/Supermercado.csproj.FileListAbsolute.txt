@@ -1,0 +1,5 @@
+c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\bin\Supermercado.dll
+c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\bin\Supermercado.pdb
+c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\obj\Debug\Supermercado.csprojResolveAssemblyReference.cache
+c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\obj\Debug\Supermercado.dll
+c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\obj\Debug\Supermercado.pdb
