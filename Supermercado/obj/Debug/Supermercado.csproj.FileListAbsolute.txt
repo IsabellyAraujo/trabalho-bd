@@ -3,3 +3,8 @@ c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Super
 c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\obj\Debug\Supermercado.csprojResolveAssemblyReference.cache
 c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\obj\Debug\Supermercado.dll
 c:\users\20141011110077\documents\visual studio 2012\Projects\Supermercado\Supermercado\obj\Debug\Supermercado.pdb
+C:\Users\20141011110077\Documents\GitHub\trabalho-bd\Supermercado\obj\Debug\Supermercado.csprojResolveAssemblyReference.cache
+C:\Users\20141011110077\Documents\GitHub\trabalho-bd\Supermercado\obj\Debug\Supermercado.dll
+C:\Users\20141011110077\Documents\GitHub\trabalho-bd\Supermercado\obj\Debug\Supermercado.pdb
+C:\Users\20141011110077\Documents\GitHub\trabalho-bd\Supermercado\bin\Supermercado.dll
+C:\Users\20141011110077\Documents\GitHub\trabalho-bd\Supermercado\bin\Supermercado.pdb
