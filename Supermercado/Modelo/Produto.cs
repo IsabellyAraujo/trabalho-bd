@@ -1,34 +1,40 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-//namespace Supermercado.Modelo
-//{
-//    public class Produto
-//    {
-//         public int id { get; set; }
-//        public int codigoDoProduto { get; set; }
-//        public string descricaoDoProduto { get; set; }
-//        public int quantidade { get; set; }
-//        public float valorUnitario { get; set; }
+namespace Supermercado.Modelo
+{
+    public class Produto
+    {
+      
 
-//        public Produto()
-//        {
-//            this.id = 0;
-//            this.codigoDoProduto = 0;
-//            this.descricaoDoProduto = "";
-//            this.quantidade = 0;
-//            this.valorUnitario = 0;
-//        }
+        public int id { get; set; }
+        public int codigoDoProduto { get; set; }
+        public string descricaoDoProduto { get; set; }
+        public int quantidadeNoPedido { get; set; }
+        public int quantidadeEmEstoque { get; set; }
+        public float valorUnitario { get; set; }
 
-//        public Produto(int aid, int acodigoDoProduto, string adescricaoDoProduto, int aquantidade, float avalorUnitario)
-//        {
-//            this.id = aid;
-//            this.codigoDoProduto = acodigoDoProduto;
-//            this.descricaoDoProduto = adescricaoDoProduto;
-//            this.quantidade = aquantidade;
-//            this.valorUnitario = avalorUnitario;
-//        }
-//    }
-//}
+        public Produto()
+        {
+            this.id = 0;
+            this.codigoDoProduto = 0;
+            this.descricaoDoProduto = "";
+            this.quantidadeNoPedido = 0;
+            this.quantidadeEmEstoque = 0;
+            this.valorUnitario = 0;
+        }
+
+        public Produto(int aid, int acodigoDoProduto, string adescricaoDoProduto, int aquantidadeNoPedido, int aquantidadeEmEstoque, float avalorUnitario)
+        {
+            this.id = aid;
+            this.codigoDoProduto = acodigoDoProduto;
+            this.descricaoDoProduto = adescricaoDoProduto;
+            this.quantidadeNoPedido = aquantidadeNoPedido;
+            this.quantidadeEmEstoque = aquantidadeEmEstoque;
+            this.valorUnitario = avalorUnitario;
+        }
+
+    }
+}

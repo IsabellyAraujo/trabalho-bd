@@ -57,19 +57,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Venda.aspx" />
+    <Content Include="Carrinho.aspx" />
+    <Content Include="Supermercado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Carrinho.aspx.cs">
+      <DependentUpon>Carrinho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrinho.aspx.designer.cs">
+      <DependentUpon>Carrinho.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DALProduto.cs" />
     <Compile Include="Modelo\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Venda.aspx.cs">
-      <DependentUpon>Venda.aspx</DependentUpon>
+    <Compile Include="Supermercado.aspx.cs">
+      <DependentUpon>Supermercado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Venda.aspx.designer.cs">
-      <DependentUpon>Venda.aspx</DependentUpon>
+    <Compile Include="Supermercado.aspx.designer.cs">
+      <DependentUpon>Supermercado.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
