@@ -15,7 +15,6 @@
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="codigoDoProduto" HeaderText="Código" SortExpression="codigoDoProduto" />
-                <asp:BoundField DataField="quantidadeEmEstoque" HeaderText="Quantidade Em Estoque" SortExpression="quantidadeEmEstoque" />
                 <asp:BoundField DataField="descricaoDoProduto" HeaderText="Descrição" SortExpression="descricaoDoProduto" />
                 <asp:BoundField DataField="valorUnitario" DataFormatString="{0:f2}" HeaderText="Valor (R$)" SortExpression="valorUnitario" />
                 <asp:ButtonField ButtonType="Button" CommandName="Adicionar_carrinho" Text="Adicionar ao Carrinho" />

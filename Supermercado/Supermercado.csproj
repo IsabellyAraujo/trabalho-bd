@@ -69,8 +69,14 @@
     <Compile Include="Carrinho.aspx.designer.cs">
       <DependentUpon>Carrinho.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DALitensVenda.cs" />
     <Compile Include="DAL\DALProduto.cs" />
-    <Compile Include="Modelo\Produto.cs" />
+    <Compile Include="DAL\DALQtd_Produto.cs" />
+    <Compile Include="DAL\DALVenda.cs" />
+    <Compile Include="Modelo\itensVenda.cs" />
+    <Compile Include="Modelo\Produtos.cs" />
+    <Compile Include="Modelo\Qtd_Produto.cs" />
+    <Compile Include="Modelo\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Supermercado.aspx.cs">
       <DependentUpon>Supermercado.aspx</DependentUpon>

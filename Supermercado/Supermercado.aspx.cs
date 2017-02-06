@@ -19,19 +19,16 @@ namespace Supermercado
             // Verifica se o comando é "Editar"
             if (e.CommandName == "Adicionar_carrinho")
             {
-                string codigo;
+                {
+                    int index = Convert.ToInt32(e.CommandArgument);
+                    int codigo = Convert.ToInt32(GridViewProduto.Rows[index].Cells[0].Text);
 
-                // Le o numero da linha selecionada
-                int index = Convert.ToInt32(e.CommandArgument);
+                    //Modelo.Produtos item = DALProduto.SelectId(codigo);
+                    //Modelo.Qtd_Produto itemCarrinho = new Modelo.Qtd_Produto(item.codigo, item.Nome, item.Valor, 1);
 
-                // Copia o conteúdo da primeira célula da linha -> Código do Livro
-                codigo = GridViewProduto.Rows[index].Cells[0].Text;
-
-                // Grava código do Livro na sessão
-                Session["title_id"] = codigo;
-
-                // Chama a tela de edição
-                Response.Redirect("~\\Carrinho.aspx");
+                    //List<Modelo.ProdutoQtd> itensCarrinho = (List<Modelo.ProdutoQtd>)Session["Salvar"];
+                    //if (!itensCarrinho.Contains(itemCarrinho)) { itensCarrinho.Add(itemCarrinho); }
+                }
 
             }
         }

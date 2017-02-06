@@ -6,50 +6,67 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using Supermercado.Modelo;
 namespace Supermercado.DAL
 {
     public class DALProduto
     {
-        string connectionString = "";
-        private object id;
+       string connectionString = "";
 
         public DALProduto()
         {
             connectionString = ConfigurationManager.ConnectionStrings["SupermercadoConnectionString"].ConnectionString;
         }
-        //Modelo Tarefa LISTAR 
+
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<Modelo.Produto> SelectOne (string id)
+        public List<Modelo.Produtos> SelectTodos()
         {
-            Modelo.Produto aProduto;
-            List<Modelo.Produto> aListProduto = new List<Modelo.Produto>();
+            Modelo.Produtos aProduto;
+            List<Modelo.Produtos> aListProdutos = new List<Modelo.Produtos>();
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
 
-            SqlConnection conn = new SqlConnection(connectionString);
-            conn.Open();
+            SqlCommand comm = con.CreateCommand();
+            comm.CommandText = "Select * from Produtos";
 
-            SqlCommand cmd = new SqlCommand("Select id, codigoDoProduto, descricaoDoProduto, quantidadeNoPedido, quantidadeEmEstoque, valorUnitario from Produtos where id = @id", conn);
-            cmd.Parameters.AddWithValue("@id", id);
+            System.Data.SqlClient.SqlDataReader dr = comm.ExecuteReader();
 
-            SqlDataReader dr = cmd.ExecuteReader();
-
-           if (dr.HasRows)
+            if (dr.HasRows)
             {
                 while (dr.Read())
                 {
-                    aProduto = new Modelo.Produto(
-                            Convert.ToInt32(dr["id"]),
-                            Convert.ToInt32(dr["codigoDoProduto"]),
-                            (dr["descricaoDoProduto"].ToString()),
-                            Convert.ToInt32(dr["quantidadeNoPedido"]),
-                            Convert.ToInt32(dr["quantidadeEmEstoque"]),
-                            Convert.(dr["valorUnitario"])
-                            );
+                    aProduto = new Modelo.Produtos(Convert.ToInt32(dr[0]), dr[1] as string, Convert.ToDouble(dr[2]));
+                    aListProdutos.Add(aProduto);
                 }
             }
 
-           dr.Close();
-           conn.Close();
-           return aListProduto;
+            dr.Close();
+            con.Close();
+            return aListProdutos;
         }
+
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public Modelo.Produtos SelectId(int codigo)
+        {
+            Modelo.Produtos aProduto;
+            System.Data.SqlClient.SqlConnection con= new System.Data.SqlClient.SqlConnection(connectionString);
+            con.Open();
+
+            System.Data.SqlClient.SqlCommand comm = con.CreateCommand();
+            comm.CommandText = "Select * from Produtos where codigo = @codigo";
+            comm.Parameters.AddWithValue("@codigo", codigo);
+
+            System.Data.SqlClient.SqlDataReader dr = comm.ExecuteReader();
+            dr.Read();
+
+            aProduto = new Modelo.Produtos(Convert.ToInt32(dr[0]), dr[1] as string, Convert.ToDouble(dr[2]));
+
+            dr.Close();
+            con.Close();
+
+            return aProduto;
+        }
+
+        
     }
 }
