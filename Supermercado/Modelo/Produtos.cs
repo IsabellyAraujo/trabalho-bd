@@ -7,9 +7,6 @@ namespace Supermercado.Modelo
 {
     public class Produtos
     {
-     
-
-        
         private int codigo;
         public int codigoDoProduto
         {
